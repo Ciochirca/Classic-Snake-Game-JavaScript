@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanke | JavaScript</title>
+
+  <style>
+    body {
+      /* no scrolling so we don't worry about min-height */
+      height: 100vh;
+      width: 100vw;
+      /* we're centering our grid section in the middle of the screen */
+      display: flex;
+      justify-content: center;
+      align-items: center ;
+      /* just some additional styling */
+      margin: 0;
+      background-color: black;
+    }
+
+    #game-board {
+      background-color: #CCC;
+      /*always have a square shape*/
+      width: 100vmin; 
+      height: 100vmin;
+      /* make the display gird */
+      display: grid;
+      /* have the grid divisions the exact same width and height */
+      grid-template-rows: repeat(21, 1fr);
+      grid-template-columns: repeat(21, 1fr);
+    }
+
+    .snake {
+      /* setup design for snake */
+      background-color: hsl(200, 100%, 50%);
+      border: .25vmin solid black;
+    }
+
+    .food {
+      /* setup desing for food */
+      background-color: hsl(50, 100%, 50%);
+      border: .25vmin solid black;
+    }
+
+  </style>
+
+<!-- defer is used to load after the html is loaded and type=module is basically telling the browser that we use multiple JavaScript files -->
+  <script src="game.js" defer type="module"></script>
+</head>
+<body>
+  
+  <div id="game-board">
+
+  </div>
+
+</body>
+</html>
